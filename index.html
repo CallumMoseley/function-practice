@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Stop looking at my source! -->
+    <head>
+        <meta charset="UTF-8">
+        <title>Function Transformation Practice</title>
+    </head>
+    <body onresize="resize()">
+        <div class="container">
+            <h1 style="display: inline-block">Function Transformation Practice</h1><span style="padding-left: 30px"><button id="back" class="btn btn-default" style="display: none">Go back</button></span>
+            <div id="intro">
+                <label>Choose parent functions to use:</label>
+                <br><input id="sqr" type="checkbox" checked> <math><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup></math>
+                <br><input id="cube" type="checkbox" checked> <math><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><msup><mi>x</mi><mn>3</mn></msup></math>
+                <br><input id="abs" type="checkbox" checked> <math><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mo>|</mo><mi>x</mi><mo>|</mo></math>
+                <br><input id="sqrt" type="checkbox" checked> <math><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><msqrt><mi>x</mi></msqrt></math>
+                <br><input id="recip" type="checkbox" checked> <math><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mfrac><mn>1</mn><mi>x</mi></mfrac></math>
+                <br><input id="sin" type="checkbox" checked> <math><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mi>sin</mi><mi>x</mi></math>
+                <br><input id="cos" type="checkbox" checked> <math><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mi>cos</mi><mi>x</mi></math>
+                <br>
+                <br>
+                <label>Choose types of questions:</label>
+                <br><input id="q1" type="checkbox" checked> Given the equation, draw the graph.
+                <br><input id="q2" type="checkbox" checked> Given the graph, find the equation.
+                <br>
+                <br>
+                <label>Use radians instead of degrees:</label>
+                <br><input id="rad" type="checkbox" checked> Radians
+                <br>
+                <br>
+                <label>A and K domain:</label>
+                <br><select id="difficulty">
+                    <option value="e">Easy</option>
+                    <option value="m">Medium</option>
+                    <option value="h">Hard</option>
+                </select>
+                <br>
+                <br>
+                <button id="start" class="btn btn-primary">Start!</button>
+            </div>
+            <div id="questionContainer" style="display: none">
+                <p id="questionText"></p>
+                <button id="revealAnswer" class="btn btn-primary">Reveal Answer</button>
+                <button id="nextQuestion" class="btn btn-primary">Next Question</button>
+                <div id="questionBoard" style="width:600px;height:600px"></div>
+                <div id="answer">
+                    <p id="answerText"></p>
+                    <div id="answerBoard" style="width:600px;height:600px"></div>
+                </div>
+            </div>
+        </div>
+        <link rel="stylesheet" type="text/css" href="js/jsxgraph.css"/>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+        <script src="http://fred-wang.github.io/mathml.css/mspace.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/d3.min.js"></script>
+        <script src="js/function-plot.js"></script>
+        <script src="js/fractions.js"></script>
+        <script src="js/functions.js"></script>
+    </body>
+</html>
